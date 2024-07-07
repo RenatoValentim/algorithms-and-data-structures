@@ -34,6 +34,12 @@ func TestBinarySearch(t *testing.T) {
 			targetValue: 3,
 			expected:    -1,
 		},
+		{
+			name:        "Should return the index for the searched value when the guess is equals for the value",
+			input:       []int{0, 2, 3, 4, 5},
+			targetValue: 3,
+			expected:    2,
+		},
 	}
 
 	for _, tc := range testCases {
