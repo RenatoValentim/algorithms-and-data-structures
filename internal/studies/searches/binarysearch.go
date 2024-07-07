@@ -1,15 +1,8 @@
 package searches
 
-type binarySearch struct {
-	items []int
-}
-
-func NewBinarySearch(items []int) *binarySearch {
-	return &binarySearch{
-		items: items,
+func BinarySearch(items []int, item int) int {
+	if items == nil || len(items) == 0 {
+		return -1
 	}
-}
-
-func (bs *binarySearch) Search(item int) int {
 	return -1
 }

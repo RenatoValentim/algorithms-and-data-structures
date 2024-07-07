@@ -32,8 +32,7 @@ func TestBinarySearch(t *testing.T) {
 
 	for _, tc := range testCases {
 		t.Run(tc.name, func(t *testing.T) {
-			bs := searches.NewBinarySearch(tc.input)
-			output := bs.Search(tc.targetValue)
+			output := searches.BinarySearch(tc.input, tc.targetValue)
 			assert.Equal(tc.expected, output)
 		})
 	}
