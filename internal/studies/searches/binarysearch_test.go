@@ -28,6 +28,12 @@ func TestBinarySearch(t *testing.T) {
 			targetValue: 3,
 			expected:    -1,
 		},
+		{
+			name:        "Should return a negative index if value not in array",
+			input:       []int{0, 2},
+			targetValue: 3,
+			expected:    -1,
+		},
 	}
 
 	for _, tc := range testCases {
