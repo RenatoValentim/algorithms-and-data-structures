@@ -1,14 +1,21 @@
 package searches
 
-func BinarySearch(items []int, item int) int {
-	if items == nil || len(items) == 0 {
+func BinarySearch(array []int, value int) int {
+	if array == nil || len(array) == 0 {
 		return -1
 	}
 	minIndex := 0
-	maxIndex := len(items) - 1
-	middleIndex := (minIndex + maxIndex) / 2
-	if items[middleIndex] == item {
-		return middleIndex
+	maxIndex := len(array) - 1
+	for minIndex <= maxIndex {
+		middleIndex := (minIndex + maxIndex) / 2
+		if array[middleIndex] == value {
+			return middleIndex
+		}
+		if array[middleIndex] > value {
+			maxIndex = middleIndex - 1
+		} else {
+			minIndex = middleIndex + 1
+		}
 	}
 	return -1
 }
