@@ -8,10 +8,11 @@ func BinarySearch(array []int, value int) int {
 	maxIndex := len(array) - 1
 	for minIndex <= maxIndex {
 		middleIndex := (minIndex + maxIndex) / 2
-		if array[middleIndex] == value {
+		guess := array[middleIndex]
+		if guess == value {
 			return middleIndex
 		}
-		if array[middleIndex] > value {
+		if guess > value {
 			maxIndex = middleIndex - 1
 		} else {
 			minIndex = middleIndex + 1
