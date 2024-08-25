@@ -1,9 +1,9 @@
-package sorts_test
+package sort_test
 
 import (
 	"testing"
 
-	"github.com/RenatoValentim/algorithms-and-data-structures/internal/studies/sorts"
+	"github.com/RenatoValentim/algorithms-and-data-structures/internal/studies/sort"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -34,7 +34,7 @@ func TestSelectionSort(t *testing.T) {
 
 	for _, tc := range testCases {
 		t.Run(tc.name, func(t *testing.T) {
-			output := sorts.SelectionSort(tc.input)
+			output := sort.SelectionSort(tc.input)
 			assert.Equal(tc.expected, output)
 		})
 	}

@@ -1,4 +1,4 @@
-package sorts
+package sort
 
 func SelectionSort(arr []int) []int {
 	if len(arr) == 0 {
