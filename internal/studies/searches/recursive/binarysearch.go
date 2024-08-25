@@ -1,7 +1,7 @@
 package recursive
 
 func BinarySearch(array []int, value int) int {
-	if array == nil || len(array) == 0 {
+	if len(array) == 0 {
 		return -1
 	}
 	minIndex := 0
