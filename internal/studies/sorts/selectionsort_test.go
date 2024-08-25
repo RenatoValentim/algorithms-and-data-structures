@@ -11,28 +11,25 @@ func TestSelectionSort(t *testing.T) {
 	assert := assert.New(t)
 
 	testCases := []struct {
-		name        string
-		input       []int
-		targetValue int
-		expected    int
+		name     string
+		input    []int
+		expected int
 	}{
 		{
-			name:        "Should return a negative index if the array is nil",
-			input:       nil,
-			targetValue: 3,
-			expected:    -1,
+			name:     "Should return a negative index if the array is nil",
+			input:    nil,
+			expected: -1,
 		},
 		{
-			name:        "Should return a negative index if array is empty",
-			input:       []int{},
-			targetValue: 3,
-			expected:    -1,
+			name:     "Should return a negative index if array is empty",
+			input:    []int{},
+			expected: -1,
 		},
 	}
 
 	for _, tc := range testCases {
 		t.Run(tc.name, func(t *testing.T) {
-			output := sorts.SelectionSort(tc.input, tc.targetValue)
+			output := sorts.SelectionSort(tc.input)
 			assert.Equal(tc.expected, output)
 		})
 	}
