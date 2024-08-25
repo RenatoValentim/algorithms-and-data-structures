@@ -16,8 +16,13 @@ func TestQuicksort(t *testing.T) {
 		expected []int
 	}{
 		{
-			name:     "Should return a negative index if the array is nil",
+			name:     "Should return an empty array is nil",
 			input:    nil,
+			expected: []int{},
+		},
+		{
+			name:     "Should return an empty array is empty",
+			input:    []int{},
 			expected: []int{},
 		},
 	}
