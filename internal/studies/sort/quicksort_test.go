@@ -25,11 +25,16 @@ func TestQuicksort(t *testing.T) {
 			input:    []int{},
 			expected: []int{},
 		},
+		{
+			name:     "Should sort the array values",
+			input:    []int{0, 4, 3, 7, 9, 4},
+			expected: []int{0, 3, 4, 4, 7, 9},
+		},
 	}
 
 	for _, tc := range testCases {
 		t.Run(tc.name, func(t *testing.T) {
-			output := sort.Quicksort(tc.input)
+			output := sort.QuickSort(tc.input)
 			assert.Equal(tc.expected, output)
 		})
 	}

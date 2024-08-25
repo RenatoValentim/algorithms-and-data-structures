@@ -1,6 +1,6 @@
 package sort
 
-func Quicksort(arr []int) []int {
+func QuickSort(arr []int) []int {
 	if len(arr) == 0 {
 		return []int{}
 	}
