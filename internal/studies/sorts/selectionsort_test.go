@@ -13,17 +13,17 @@ func TestSelectionSort(t *testing.T) {
 	testCases := []struct {
 		name     string
 		input    []int
-		expected int
+		expected []int
 	}{
 		{
 			name:     "Should return a negative index if the array is nil",
 			input:    nil,
-			expected: -1,
+			expected: []int{},
 		},
 		{
 			name:     "Should return a negative index if array is empty",
 			input:    []int{},
-			expected: -1,
+			expected: []int{},
 		},
 	}
 

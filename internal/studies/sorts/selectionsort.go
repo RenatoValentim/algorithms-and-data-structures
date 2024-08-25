@@ -1,8 +1,8 @@
 package sorts
 
-func SelectionSort(arr []int) int {
+func SelectionSort(arr []int) []int {
 	if len(arr) == 0 {
-		return -1
+		return []int{}
 	}
-	return -1
+	return []int{}
 }
