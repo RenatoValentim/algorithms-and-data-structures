@@ -22,6 +22,12 @@ func TestSelectionSort(t *testing.T) {
 			targetValue: 3,
 			expected:    -1,
 		},
+		{
+			name:        "Should return a negative index if array is empty",
+			input:       []int{},
+			targetValue: 3,
+			expected:    -1,
+		},
 	}
 
 	for _, tc := range testCases {
