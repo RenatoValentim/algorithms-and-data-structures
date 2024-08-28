@@ -33,6 +33,16 @@ func TestCollection(t *testing.T) {
 			},
 			err: nil,
 		},
+		{
+			name:  "Should create a new array with inputted size and items",
+			input: []int{1, 2, 3},
+			size:  10,
+			expected: &array{
+				Items: []int{1, 2, 3},
+				Size:  10,
+			},
+			err: nil,
+		},
 	}
 
 	for _, tc := range testCase {
