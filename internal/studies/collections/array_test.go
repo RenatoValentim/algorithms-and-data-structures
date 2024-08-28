@@ -28,7 +28,7 @@ func TestCollection(t *testing.T) {
 			input: nil,
 			size:  10,
 			expected: &array{
-				Items: []int{},
+				Items: nil,
 				Size:  10,
 			},
 			err: nil,

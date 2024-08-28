@@ -10,7 +10,7 @@ func NewArray(items []int, size int) (*array, error) {
 		return nil, ErrIvalidArraySize
 	}
 	return &array{
-		Items: []int{},
+		Items: items,
 		Size:  size,
 	}, nil
 }
