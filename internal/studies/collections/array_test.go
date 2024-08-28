@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func TestCollection(t *testing.T) {
+func TestNewArray(t *testing.T) {
 	assert := assert.New(t)
 
 	testCase := []struct {
