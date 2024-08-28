@@ -14,3 +14,8 @@ func NewArray(items []int, size int) (*array, error) {
 		Size:  size,
 	}, nil
 }
+
+func (a *array) Push(i int) error {
+	a.Items = append(a.Items, i)
+	return nil
+}
