@@ -23,12 +23,23 @@ func TestCollection(t *testing.T) {
 			expected: nil,
 			err:      ErrIvalidArraySize,
 		},
+		{
+			name:  "Should create a new array with inputted size",
+			input: nil,
+			size:  10,
+			expected: &array{
+				Items: []int{},
+				Size:  10,
+			},
+			err: nil,
+		},
 	}
 
 	for _, tc := range testCase {
 		t.Run(tc.name, func(t *testing.T) {
-			_, err := NewArray(tc.input, tc.size)
+			a, err := NewArray(tc.input, tc.size)
 			assert.Equal(err, tc.err)
+			assert.Equal(a, tc.expected)
 		})
 	}
 }
