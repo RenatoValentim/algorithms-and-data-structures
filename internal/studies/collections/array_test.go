@@ -1,9 +1,8 @@
-package collections_test
+package collections
 
 import (
 	"testing"
 
-	"github.com/RenatoValentim/algorithms-and-data-structures/internal/studies/collections"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -12,23 +11,23 @@ func TestCollection(t *testing.T) {
 
 	testCase := []struct {
 		err      error
-		expected *collections.Array
+		expected *array
 		name     string
 		input    []int
 		size     int
 	}{
 		{
-			name:     "Should return an error for invalid array size ",
+			name:     "Should return an error for invalid array size",
 			input:    nil,
 			size:     0,
 			expected: nil,
-			err:      collections.ErrIvalidArraySize,
+			err:      ErrIvalidArraySize,
 		},
 	}
 
 	for _, tc := range testCase {
 		t.Run(tc.name, func(t *testing.T) {
-			_, err := collections.NewArray(tc.input, tc.size)
+			_, err := NewArray(tc.input, tc.size)
 			assert.Equal(err, tc.err)
 		})
 	}

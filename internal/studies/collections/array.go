@@ -1,15 +1,15 @@
 package collections
 
-type Array struct {
+type array struct {
 	Items []int
 	Size  int
 }
 
-func NewArray(items []int, size int) (*Array, error) {
+func NewArray(items []int, size int) (*array, error) {
 	if size <= 0 {
 		return nil, ErrIvalidArraySize
 	}
-	return &Array{
+	return &array{
 		Items: []int{},
 		Size:  size,
 	}, nil
