@@ -1,20 +1,29 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/
 {
-  "name": "dev-container",
+  "name": "dev",
   "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
   "build": {
     "dockerfile": "Dockerfile",
     "context": "."
   },
 
-  "remoteUser": "dev",
+  "remoteUser": "dev"
 
-  "mounts": [
-    "source=${localEnv:HOME}/.config/nvim,target=/home/dev/.config/nvim,type=bind,consistency=cached",
-    "source=${localEnv:HOME}/.config/lazygit,target=/home/dev/.config/lazygit,type=bind,consistency=cached",
-    "source=${localEnv:HOME}/.oh-my-zsh,target=/home/dev/oh-my-zsh,type=bind,consistency=cached",
-    "source=${localEnv:HOME}/.zshrc,target=/home/dev/.zshrc,type=bind,consistency=cached",
-    "source=${localEnv:HOME}/.p10k.zsh,target=/home/dev/.p10k.zsh,type=bind,consistency=cached"
-  ]
+  // "mounts": [
+  //   "source=${localEnv:HOME}/.config/nvim,target=/home/dev/.config/nvim,type=bind,consistency=cached",
+  //   "source=${localEnv:HOME}/.config/lazygit,target=/home/dev/.config/lazygit,type=bind,consistency=cached",
+  //   "source=${localEnv:HOME}/.oh-my-zsh,target=/home/dev/oh-my-zsh,type=bind,consistency=cached",
+  //   "source=${localEnv:HOME}/.zshrc,target=/home/dev/.zshrc,type=bind,consistency=cached",
+  //   "source=${localEnv:HOME}/.p10k.zsh,target=/home/dev/.p10k.zsh,type=bind,consistency=cached",
+  //   "source=${localEnv:HOME}/.ssh,target=/home/dev/.ssh,type=bind,consistency=cached"
+  // ],
+
+  // "dotfiles": {
+  //   "repository": "https://github.com/RenatoValentim/dotfiles",
+  //   "targetPath": "/home/dev"
+  //   // "installCommand": "bash setup.sh" // Se necessário, comande para instalar/configurar os dotfiles
+  // },
+
+  // "postCreateCommand": "cp $HOME/dotfiles/config/lazyvim $HOME/.config/nvim && cp $HOME/dotfiles/config/lazygit $HOME/.config/lazygit && cp $HOME/dotfiles/config/zsh $HOME && cp $HOME/dotfiles/config/.p10k $HOME"
 }
